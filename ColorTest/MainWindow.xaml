@@ -5,8 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ColorTest"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
-    <Grid>
-        
+        Title="MainWindow"
+        Loaded="Window_Loaded"
+        Unloaded="Window_Unloaded" Width="640" Height="640">
+    <Grid x:Name="grid">
+        <Image x:Name="imageColor" VerticalAlignment="Top" Width="640" Height="480"/>
+        <CheckBox x:Name="writeCheck" Content="WriteCheck" HorizontalAlignment="Left" VerticalAlignment="Bottom" Checked="writeCheck_Checked"/>
+        <Canvas x:Name="CanvasPoint" Width="640" Height="480" VerticalAlignment="Top">
+            <TextBlock x:Name="distance" TextWrapping="Wrap" Text="x:" Canvas.Top="482" Canvas.Left="3" FontSize="24"/>
+            <TextBlock x:Name="depth" TextWrapping="Wrap" Text="z:" Canvas.Top="522" Canvas.Left="3" FontSize="24"/>
+        </Canvas>
     </Grid>
 </Window>
